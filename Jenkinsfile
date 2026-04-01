@@ -13,7 +13,7 @@ pipeline {
         stage('Test Application') {
             steps {
                 echo '=== Testing Petclinic Application ==='
-                sh 'mvn test'
+                sh 'mvn -Djacoco.skip=true test'
             }
             post {
                 always {
